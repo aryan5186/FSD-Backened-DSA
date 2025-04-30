@@ -11,7 +11,7 @@ const DeleteBook = () => {
 
   const fetchBooks = async () => {
     try {
-      const res = await axios.get('https://book-app-31ms.onrender.com/books');
+      const res = await axios.get('https://fsd-backened-dsa.onrender.com/books');
       setBooks(res.data);
     } catch (error) {
       console.error(error);
@@ -24,7 +24,7 @@ const DeleteBook = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://book-app-31ms.onrender.com/books/${id}`);
+      await axios.delete(`https://fsd-backened-dsa.onrender.com/books/${id}`);
       alert('Book deleted successfully');
       fetchBooks(); // Refresh the list
     } catch (error) {
